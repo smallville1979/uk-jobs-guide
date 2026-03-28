@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="UK Jobs Survival Guide — free courses, work from home jobs, graduate schemes, apprenticeships, last minute work and more. Real advice, no BS.">
+<meta property="og:title" content="UK Jobs Survival Guide 💼">
+<meta property="og:description" content="Graduates screwed on Reddit. Back2Work. Arise. TotalJobs warehouse. KFC management. Free CVs. Real jobs, real advice, zero cost.">
+<title>UK Jobs Survival Guide 💼</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f0e8;
+  --card:#fff;
+  --card2:#faf7f2;
+  --blue:#1a1aff;
+  --blue2:#0000cc;
+  --amber:#f5a623;
+  --green:#00875a;
+  --red:#e53e3e;
+  --text:#111;
+  --muted:#666;
+  --border:#e0d9ce;
+  --r:12px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden}
+
+/* TICKER */
+.ticker{background:var(--blue);padding:.4rem 0;overflow:hidden;white-space:nowrap}
+.ticker-inner{display:inline-block;animation:tick 30s linear infinite;font-size:12px;font-weight:600;letter-spacing:.08em;color:#fff}
+@keyframes tick{0%{transform:translateX(100vw)}100%{transform:translateX(-100%)}}
+
+/* NAV */
+nav{background:rgba(245,240,232,.97);border-bottom:1px solid var(--border);padding:.75rem 1.5rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(10px)}
+.nav-logo{font-family:'Syne',sans-serif;font-size:1.1rem;color:var(--blue);font-weight:800}
+.nav-logo span{color:var(--text)}
+.nav-links{display:flex;gap:1.5rem;flex-wrap:wrap}
+.nav-links a{font-size:13px;color:var(--muted);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--blue)}
+
+/* HERO */
+.hero{padding:5rem 1.5rem 4rem;max-width:100%;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:rgba(26,26,255,.04);pointer-events:none}
+.hero-tag{display:inline-flex;align-items:center;gap:.5rem;background:rgba(26,26,255,.08);border:1px solid rgba(26,26,255,.2);border-radius:20px;padding:.4rem 1rem;font-size:12px;font-weight:600;color:var(--blue);letter-spacing:.06em;text-transform:uppercase;margin-bottom:1.5rem}
+.hero h1{font-family:'Syne',sans-serif;font-size:clamp(3rem,10vw,7rem);line-height:.95;margin-bottom:1.5rem;color:var(--text);font-weight:800;max-width:800px}
+.hero h1 span{color:var(--blue)}
+.hero-sub{font-size:1.1rem;color:var(--muted);max-width:560px;margin-bottom:2.5rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.5rem;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none;transition:all .2s;cursor:pointer;border:none;font-family:'DM Sans',sans-serif}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{background:var(--blue2);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--text);border:1.5px solid var(--border)}
+.btn-outline:hover{border-color:var(--blue);color:var(--blue)}
+.btn-green{background:var(--green);color:#fff}
+.btn-green:hover{background:#006644;transform:translateY(-2px)}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.stat{background:var(--bg);padding:2rem 1rem;text-align:center}
+.stat-num{font-family:'Syne',sans-serif;font-size:2.5rem;color:var(--blue);line-height:1;font-weight:800}
+.stat-label{font-size:12px;color:var(--muted);margin-top:.25rem}
+
+/* SECTIONS */
+section{padding:5rem 1.5rem;max-width:960px;margin:0 auto}
+.section-tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);border:1px solid rgba(26,26,255,.2);border-radius:20px;padding:.3rem .9rem;margin-bottom:1rem}
+section h2{font-family:'Syne',sans-serif;font-size:clamp(2rem,6vw,4.5rem);line-height:1;color:var(--text);margin-bottom:.5rem;font-weight:800}
+.section-intro{font-size:.95rem;color:var(--muted);max-width:600px;margin-bottom:3rem}
+
+/* CARDS */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem;transition:border-color .2s,transform .2s,box-shadow .2s}
+.card:hover{border-color:#aaa;transform:translateY(-2px);box-shadow:0 4px 20px rgba(0,0,0,.06)}
+.card-icon{font-size:1.75rem;margin-bottom:.75rem;display:block}
+.card h3{font-size:1rem;font-weight:600;color:var(--text);margin-bottom:.5rem}
+.card p{font-size:.85rem;color:var(--muted);line-height:1.6}
+.card a{color:var(--blue);font-size:.82rem;text-decoration:none;display:inline-block;margin-top:.5rem;font-weight:500}
+.card a:hover{text-decoration:underline}
+.card-badge{display:inline-block;margin-top:.75rem;font-size:11px;padding:.2rem .65rem;border-radius:12px;font-weight:600}
+.badge-blue{background:rgba(26,26,255,.08);color:var(--blue)}
+.badge-green{background:rgba(0,135,90,.1);color:var(--green)}
+.badge-amber{background:rgba(245,166,35,.12);color:#b37700}
+
+/* FEATURED */
+.card-featured{background:var(--card);border:1.5px solid rgba(26,26,255,.2);border-radius:var(--r);padding:2rem;margin-bottom:1.5rem}
+.card-featured h3{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:800;color:var(--blue);margin-bottom:.5rem}
+.card-featured p{color:var(--muted);font-size:.93rem;margin-bottom:1rem}
+.tag-row{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.25rem}
+.tag{font-size:11px;background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:.25rem .65rem;color:var(--muted)}
+
+/* INFO BOX */
+.info-box{background:rgba(26,26,255,.04);border:1px solid rgba(26,26,255,.15);border-radius:var(--r);padding:1rem 1.25rem;font-size:.88rem;color:#333;margin:.75rem 0;line-height:1.7}
+.info-box strong{color:var(--blue)}
+
+/* GOLD BOX */
+.gold-box{background:rgba(245,166,35,.06);border:1px solid rgba(245,166,35,.25);border-radius:var(--r);padding:1rem 1.25rem;font-size:.88rem;color:#5a3e00;margin:.75rem 0;line-height:1.7}
+.gold-box strong{color:#b37700}
+
+/* WARNING */
+.warning-box{background:rgba(229,62,62,.05);border:1px solid rgba(229,62,62,.2);border-radius:var(--r);padding:1rem 1.25rem;font-size:.85rem;color:#c53030;margin-top:1rem}
+
+/* LIST CARDS */
+.list-cards{display:flex;flex-direction:column;gap:.75rem}
+.list-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1rem 1.25rem;display:flex;gap:1rem;align-items:flex-start;transition:border-color .2s}
+.list-card:hover{border-color:#aaa}
+.list-card-icon{font-size:1.5rem;flex-shrink:0}
+.list-card-body h4{font-size:.93rem;font-weight:600;color:var(--text);margin-bottom:.2rem}
+.list-card-body p{font-size:.83rem;color:var(--muted);line-height:1.5}
+.list-card-body a{color:var(--blue);text-decoration:none;font-size:.83rem;font-weight:500}
+.list-card-body a:hover{text-decoration:underline}
+
+/* CTA */
+.cta-card{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1.5rem 2rem;margin-top:1.5rem}
+.cta-card p{font-size:.88rem;color:var(--muted)}
+.cta-card strong{color:var(--text);display:block;margin-bottom:.25rem}
+
+/* DIVIDER */
+hr{border:none;border-top:1px solid var(--border)}
+
+/* NETWORK CTA */
+.network-cta{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin:2rem 0}
+.network-card{border-radius:var(--r);padding:1.5rem;text-decoration:none;display:block;transition:transform .2s}
+.network-card:hover{transform:translateY(-2px)}
+.network-card h3{font-family:'Syne',sans-serif;font-size:1rem;font-weight:800;margin-bottom:.4rem}
+.network-card p{font-size:.82rem;opacity:.85}
+.nc-scam{background:#1a1a1a;color:#ff3333}
+.nc-scam h3{color:#ff6666}
+.nc-scam p{color:#aaa}
+.nc-benefits{background:#1a2a1a;color:var(--green)}
+.nc-benefits h3{color:#00cc66}
+.nc-benefits p{color:#aaa}
+
+/* SHARE */
+.share-bar{background:var(--card);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:3rem 1.5rem;text-align:center}
+.share-bar h2{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;margin-bottom:.5rem}
+.share-bar p{color:var(--muted);margin-bottom:2rem;font-size:.9rem}
+.share-btns{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center}
+.share-btn{display:inline-flex;align-items:center;gap:.5rem;padding:.65rem 1.25rem;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;border:1px solid var(--border);color:var(--text);background:var(--card2);transition:all .2s}
+.share-btn:hover{transform:translateY(-1px)}
+.share-btn.wa:hover{border-color:#25d366;color:#25d366}
+.share-btn.fb:hover{border-color:#1877f2;color:#1877f2}
+.share-btn.tw:hover{border-color:#1da1f2;color:#1da1f2}
+.share-btn.rd:hover{border-color:#ff4500;color:#ff4500}
+
+/* FOOTER */
+footer{background:#111;border-top:1px solid #222;padding:2.5rem 1.5rem;text-align:center}
+footer p{font-size:.8rem;color:#666;line-height:2;max-width:600px;margin:0 auto}
+footer a{color:#666;text-decoration:none}
+footer a:hover{color:#fff}
+.footer-logo{font-family:'Syne',sans-serif;font-size:1.5rem;color:#fff;margin-bottom:.5rem;font-weight:800}
+
+@media(max-width:600px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  section{padding:3rem 1rem}
+  .nav-links{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker">
+  <span class="ticker-inner">💼 NATIONAL CAREERS SERVICE — FREE CV HELP &nbsp;&nbsp;&nbsp; 🏭 TOTALJOBS — LAST MINUTE WAREHOUSE SHIFTS TODAY &nbsp;&nbsp;&nbsp; 🏠 ARISE & TELEPERFORMANCE — WORK FROM HOME CUSTOMER SERVICE &nbsp;&nbsp;&nbsp; 🎓 MILKROUND — GRADUATE SCHEMES THAT ACTUALLY WORK &nbsp;&nbsp;&nbsp; 🍔 KFC & McDONALD'S FAST TRACK MANAGEMENT — GENUINELY GOOD CAREERS &nbsp;&nbsp;&nbsp; 📚 FREE APPRENTICESHIPS — EARN WHILE YOU LEARN &nbsp;&nbsp;&nbsp; 💰 GET PAID A DAY EARLY WITH REVOLUT &nbsp;&nbsp;&nbsp;</span>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">UK<span>Jobs Guide</span> 💼</div>
+  <div class="nav-links">
+    <a href="#quickwin">⚡ Quick Wins</a>
+    <a href="#wfh">🏠 Work From Home</a>
+    <a href="#graduates">🎓 Graduates</a>
+    <a href="#freecourses">📚 Free Courses</a>
+    <a href="#cvhelp">📄 CV Help</a>
+    <a href="#network">🔗 Full Network</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero" style="max-width:100%;background:var(--bg)">
+  <div style="max-width:960px;margin:0 auto">
+    <div class="hero-tag">🇬🇧 Free Resource — UK Jobs & Careers</div>
+    <h1>Stop scrolling.<br>Start <span>earning.</span></h1>
+    <p class="hero-sub">Free courses, work from home jobs, graduate schemes, apprenticeships, last minute shifts — all real, all free to apply, all on one page.</p>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap">
+      <a href="#quickwin" class="btn btn-blue">⚡ Quick Wins First</a>
+      <a href="#wfh" class="btn btn-outline">🏠 Work From Home</a>
+      <a href="#graduates" class="btn btn-outline">🎓 Graduate Jobs</a>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat"><div class="stat-num">1M+</div><div class="stat-label">UK jobs unfilled right now</div></div>
+  <div class="stat"><div class="stat-num">£0</div><div class="stat-label">Cost to use this guide</div></div>
+  <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Legitimate — no scams</div></div>
+  <div class="stat"><div class="stat-num">∞</div><div class="stat-label">Better days ahead</div></div>
+</div>
+
+<!-- QUICK WINS -->
+<section id="quickwin">
+  <div class="section-tag">⚡ Start Here</div>
+  <h2>Quick Wins —<br>Money This Week</h2>
+  <p class="section-intro">Need money fast and legitimately? These are the fastest routes to paid work in the UK right now. No experience needed for most of them.</p>
+
+  <div class="list-cards">
+    <div class="list-card">
+      <div class="list-card-icon">🏭</div>
+      <div class="list-card-body">
+        <h4>TotalJobs — Last Minute Warehouse & Logistics</h4>
+        <p>TotalJobs posts last minute warehouse, logistics, and factory shifts daily — some starting within 24-48 hours. Amazon, Hermes, DHL and more. No experience needed for most. Apply online, start almost immediately.</p>
+        <a href="https://www.totaljobs.com" target="_blank" rel="noopener">Search last minute shifts on TotalJobs →</a>
+      </div>
+    </div>
+    <div class="list-card">
+      <div class="list-card-icon">🍔</div>
+      <div class="list-card-body">
+        <h4>McDonald's & KFC — Fast Track Management</h4>
+        <p>Don't laugh. McDonald's and KFC have some of the best structured management training in UK retail. Crew to manager in 12-18 months. Real qualifications. Real pay progression. Multiple graduates have started here and built serious careers. Apply directly on their websites — always hiring.</p>
+        <a href="https://www.mcdonalds.com/gb/en-gb/careers.html" target="_blank" rel="noopener">McDonald's careers →</a>
+        &nbsp;&nbsp;
+        <a href="https://jobs.kfc.co.uk" target="_blank" rel="noopener">KFC careers →</a>
+      </div>
+    </div>
+    <div class="list-card">
+      <div class="list-card-icon">🚗</div>
+      <div class="list-card-body">
+        <h4>Delivery & Gig Work — Start This Week</h4>
+        <p>Deliveroo, Uber Eats, Amazon Flex — all let you sign up and start earning within days. Not a career but genuine income while you look for something better. Flexible hours, no boss, cash in days. Need a bike, scooter, or car depending on the platform.</p>
+        <a href="https://riders.deliveroo.co.uk" target="_blank" rel="noopener">Deliveroo →</a>
+        &nbsp;&nbsp;
+        <a href="https://www.amazon.co.uk/b?node=11468118031" target="_blank" rel="noopener">Amazon Flex →</a>
+      </div>
+    </div>
+    <div class="list-card">
+      <div class="list-card-icon">🏥</div>
+      <div class="list-card-body">
+        <h4>NHS — Always Hiring, Always Will Be</h4>
+        <p>The NHS is the UK's biggest employer and never stops hiring. From porters and cleaners to admin and healthcare assistants — no degree required for entry level. Full training provided. Job security like nowhere else. Check NHS Jobs daily.</p>
+        <a href="https://www.jobs.nhs.uk" target="_blank" rel="noopener">Search NHS Jobs →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- WORK FROM HOME -->
+<section id="wfh">
+  <div class="section-tag">🏠 Work From Home</div>
+  <h2>Real Work<br>From Home Jobs</h2>
+  <p class="section-intro">Not surveys. Not MLM. Actual employed positions where you work from your house and get paid a proper salary. These are real companies.</p>
+
+  <div class="gold-box" style="margin-bottom:2rem">
+    <strong>💡 The honest truth about WFH jobs:</strong> Most legitimate work from home jobs are customer service, admin, or tech support. They pay £20,000-£28,000. They're real jobs with contracts, holiday pay, and sick pay. They're not passive income. They're not get rich quick. They're just jobs — that happen to be at home.
+  </div>
+
+  <div class="card-grid">
+    <div class="card">
+      <span class="card-icon">☎️</span>
+      <h3>Arise — Work From Home Customer Service</h3>
+      <p>Arise lets you work from home providing customer service for major brands. Flexible hours, work around your schedule. Takes graduates and non-graduates. Setup required but genuinely legitimate WFH income.</p>
+      <a href="https://www.arise.com/work-from-home-jobs" target="_blank" rel="noopener">arise.com →</a>
+      <div class="card-badge badge-blue">🏠 Fully remote</div>
+    </div>
+    <div class="card">
+      <span class="card-icon">🎧</span>
+      <h3>Teleperformance — Remote Customer Service</h3>
+      <p>Teleperformance is one of the world's largest customer service companies and regularly hires remote workers in the UK. Full training provided. Genuine employed position with full benefits. Takes people with no experience.</p>
+      <a href="https://jobs.teleperformance.com/en/locations/united-kingdom" target="_blank" rel="noopener">teleperformance.com →</a>
+      <div class="card-badge badge-green">✅ Proper employed position</div>
+    </div>
+    <div class="card">
+      <span class="card-icon">💻</span>
+      <h3>Back2Work — Guaranteed WFH Placements</h3>
+      <p>Back2Work run programmes specifically designed to get people back into employment with guaranteed work from home placements. Have historically paid participants during training. Worth contacting directly to ask what's currently available.</p>
+      <a href="https://www.back2workuk.com" target="_blank" rel="noopener">back2workuk.com →</a>
+      <div class="card-badge badge-amber">💰 Can pay during training</div>
+    </div>
+    <div class="card">
+      <span class="card-icon">🔍</span>
+      <h3>Indeed & Reed — Filter for Remote</h3>
+      <p>Both Indeed and Reed let you filter jobs by "remote" or "work from home." Set up a daily email alert for "remote customer service" or "remote admin" in your area. New jobs posted daily. Free to apply.</p>
+      <a href="https://www.indeed.co.uk/jobs?q=remote&l=UK" target="_blank" rel="noopener">Indeed remote jobs →</a>
+      &nbsp;&nbsp;
+      <a href="https://www.reed.co.uk/jobs/work-from-home-jobs" target="_blank" rel="noopener">Reed WFH jobs →</a>
+      <div class="card-badge badge-blue">🔔 Set up daily alerts</div>
+    </div>
+  </div>
+
+  <div class="warning-box" style="margin-top:1.5rem">
+    ⚠️ Any "work from home" job that asks you to pay upfront, buy a starter kit, recruit others, or receive money into your account for someone else — is a scam. Real WFH jobs pay YOU. You never pay them.
+  </div>
+</section>
+
+<hr>
+
+<!-- GRADUATES -->
+<section id="graduates">
+  <div class="section-tag">🎓 Graduates</div>
+  <h2>Graduate Jobs<br>— Real Talk</h2>
+  <p class="section-intro">Reddit is full of graduates convinced they're unemployable. They're not. They're just looking in the wrong places with the wrong CV. Here's what actually works.</p>
+
+  <div class="info-box" style="margin-bottom:2rem">
+    <strong>The Reddit graduate trap:</strong> Graduates sit in forums comparing rejection emails, convincing each other the market is impossible. Meanwhile other graduates are getting hired. The difference is usually where they're looking and how their CV reads — not their degree or experience.
+  </div>
+
+  <div class="list-cards" style="margin-bottom:2rem">
+    <div class="list-card">
+      <div class="list-card-icon">🥛</div>
+      <div class="list-card-body">
+        <h4>Milkround — UK's Best Graduate Job Site</h4>
+        <p>Milkround is specifically built for UK graduates and has placed people in roles at Mars, Unilever, the Civil Service, and hundreds of other employers. Direct graduate schemes, entry level roles, and internships. Free to use. Set up a profile and let employers find you too.</p>
+        <a href="https://www.milkround.com" target="_blank" rel="noopener">milkround.com → Start here</a>
+      </div>
+    </div>
+    <div class="list-card">
+      <div class="list-card-icon">🏛️</div>
+      <div class="list-card-body">
+        <h4>Civil Service Fast Stream — Seriously Underrated</h4>
+        <p>The Civil Service Fast Stream is one of the best graduate schemes in the UK and massively underrated. Job security, pension, good salary, genuine progression. Open to all degree subjects. Applications open annually — check the website for current rounds.</p>
+        <a href="https://www.faststream.gov.uk" target="_blank" rel="noopener">faststream.gov.uk →</a>
+      </div>
+    </div>
+    <div class="list-card">
+      <div class="list-card-icon">🌍</div>
+      <div class="list-card-body">
+        <h4>Gap Years & Work Experience — Do It Properly</h4>
+        <p>A well-structured gap year with real work experience beats a blank CV every time. BUNAC, Raleigh International, and VSO all run structured programmes. Even voluntary work at a local charity for 3 months fills the CV and builds real skills employers want.</p>
+        <a href="https://www.bunac.org" target="_blank" rel="noopener">BUNAC →</a>
+        &nbsp;&nbsp;
+        <a href="https://www.raleighinternational.org" target="_blank" rel="noopener">Raleigh International →</a>
+      </div>
+    </div>
+    <div class="list-card">
+      <div class="list-card-icon">💼</div>
+      <div class="list-card-body">
+        <h4>LinkedIn — Use It Properly or Don't Use It</h4>
+        <p>Most graduates have a half-empty LinkedIn. Complete it 100%. Get 3 recommendations from lecturers or placement supervisors. Post once a week about your field — literally anything. Recruiters search LinkedIn daily. An active, complete profile gets found. An empty one doesn't.</p>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener">linkedin.com →</a>
+      </div>
+    </div>
+    <div class="list-card">
+      <div class="list-card-icon">🏢</div>
+      <div class="list-card-body">
+        <h4>Temp Work Through Agencies — Hidden Graduate Market</h4>
+        <p>Temp agencies like Hays, Adecco, and Reed place graduates in office roles daily. You get paid, get experience, and often get offered permanent roles. Register with 3-4 agencies in your city. Turns up far more than job boards alone.</p>
+        <a href="https://www.hays.co.uk" target="_blank" rel="noopener">Hays →</a>
+        &nbsp;&nbsp;
+        <a href="https://www.adecco.co.uk" target="_blank" rel="noopener">Adecco →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- FREE COURSES -->
+<section id="freecourses">
+  <div class="section-tag">📚 Free Courses</div>
+  <h2>Free Skills<br>&amp; Training</h2>
+  <p class="section-intro">You can get qualified for free in the UK. Properly qualified. These aren't YouTube tutorials — they're recognised courses, apprenticeships, and funded programmes.</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <span class="card-icon">🎓</span>
+      <h3>Apprenticeships — Earn While You Learn</h3>
+      <p>Apprenticeships are available at all levels — including degree level. You earn a salary while getting qualified. Available in everything from digital marketing to engineering to accountancy. Any age, any background.</p>
+      <a href="https://www.findapprenticeship.service.gov.uk" target="_blank" rel="noopener">Find an Apprenticeship →</a>
+      <div class="card-badge badge-green">💰 Paid while you train</div>
+    </div>
+    <div class="card">
+      <span class="card-icon">💻</span>
+      <h3>Google Digital Garage — Free &amp; Certified</h3>
+      <p>Google's free digital marketing, data, and career skills courses. Certificates are genuinely respected by employers. Digital Marketing Fundamentals alone takes a few days and makes a real difference to a CV.</p>
+      <a href="https://learndigital.withgoogle.com/digitalgarage" target="_blank" rel="noopener">Google Digital Garage →</a>
+      <div class="card-badge badge-blue">🏆 Google certified — free</div>
+    </div>
+    <div class="card">
+      <span class="card-icon">🏛️</span>
+      <h3>National Careers Service — Free Everything</h3>
+      <p>The National Careers Service offers free skills assessments, career guidance, and funded course referrals. Their email advisors are brilliant — genuinely helpful and empathetic. Use email over phone for better advice.</p>
+      <a href="https://nationalcareers.service.gov.uk" target="_blank" rel="noopener">nationalcareers.service.gov.uk →</a>
+      <div class="card-badge badge-green">✅ Email them — genuinely great</div>
+    </div>
+    <div class="card">
+      <span class="card-icon">🍽️</span>
+      <h3>Free Food Hygiene Certificate</h3>
+      <p>A Level 2 Food Hygiene certificate opens doors in hospitality, catering, and food retail. Several providers offer it free online. Takes a few hours. Opens doors immediately for kitchen, café, and food service work.</p>
+      <a href="https://www.highspeedtraining.co.uk/food-hygiene/" target="_blank" rel="noopener">Free Food Hygiene course →</a>
+      <div class="card-badge badge-amber">⏱️ A few hours, free</div>
+    </div>
+    <div class="card">
+      <span class="card-icon">📊</span>
+      <h3>Microsoft Learn — Free Tech Skills</h3>
+      <p>Free Microsoft courses in Excel, data analysis, cloud computing, and more. Certificates included. Excel skills alone make a CV significantly more competitive for admin and office roles.</p>
+      <a href="https://learn.microsoft.com/en-gb/" target="_blank" rel="noopener">Microsoft Learn →</a>
+      <div class="card-badge badge-blue">🏆 Microsoft certified — free</div>
+    </div>
+    <div class="card">
+      <span class="card-icon">🎨</span>
+      <h3>Canva Design School — Free</h3>
+      <p>Free graphic design courses from Canva. Social media design, presentation skills, brand design. Useful for marketing roles, admin, and anyone wanting to add creative skills to their CV.</p>
+      <a href="https://www.canva.com/designschool/" target="_blank" rel="noopener">Canva Design School →</a>
+      <div class="card-badge badge-amber">🎨 Creative skills — free</div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<!-- CV HELP -->
+<section id="cvhelp">
+  <div class="section-tag">📄 CV Help</div>
+  <h2>CV &amp; Interview<br>Help — Free</h2>
+  <p class="section-intro">Most CVs are rejected in 6 seconds. Here's how to make yours survive the scan and actually get read.</p>
+
+  <div class="card-featured">
+    <h3>🏛️ National Careers Service — Free CV Reviews</h3>
+    <p>The National Careers Service will review your CV for free and give personalised written feedback. Their email service is genuinely excellent — detailed, empathetic, and actually useful. Better than most paid services. Email them, don't call.</p>
+    <div class="tag-row"><span class="tag">Completely free</span><span class="tag">Email is better than phone</span><span class="tag">Personalised feedback</span><span class="tag">Professional advisors</span></div>
+    <a href="https://nationalcareers.service.gov.uk/contact-us" target="_blank" rel="noopener" class="btn btn-blue" style="font-size:13px">Get Free CV Help →</a>
+  </div>
+
+  <div class="card-grid" style="margin-top:1rem">
+    <div class="card">
+      <span class="card-icon">📝</span>
+      <h3>CV Tips That Actually Work</h3>
+      <p>One page for under 5 years experience. Two pages maximum ever. Name and contact at top. No photo. No "references available on request." Bullet points not paragraphs. Tailor it for every single job — copy words from the job advert into your CV.</p>
+      <div class="card-badge badge-blue">⚡ Tailor every application</div>
+    </div>
+    <div class="card">
+      <span class="card-icon">🎯</span>
+      <h3>Cover Letters — Keep It Short</h3>
+      <p>Three short paragraphs. Why you want this specific job. What you bring. When you're available. That's it. Most cover letters are too long and too generic. Shorter and specific beats longer and vague every time.</p>
+      <div class="card-badge badge-green">✅ 3 paragraphs maximum</div>
+    </div>
+    <div class="card">
+      <span class="card-icon">🤝</span>
+      <h3>Interview Prep — STAR Method</h3>
+      <p>Situation, Task, Action, Result. Prepare 5 examples from your life that answer "tell me about a time when..." questions. Practice out loud — not in your head. Record yourself on your phone. Painful but it works.</p>
+      <div class="card-badge badge-amber">🎤 Practice out loud</div>
+    </div>
+  </div>
+
+  <div class="info-box" style="margin-top:1.5rem">
+    <strong>💡 The one CV trick that works every time:</strong> Copy the exact words from the job description into your CV and cover letter. Applicant Tracking Systems (ATS) scan for keyword matches before a human ever sees your application. If the job says "customer service experience" — use those exact words. Not "worked with customers." Exact words.
+  </div>
+</section>
+
+<hr>
+
+<!-- NETWORK -->
+<section id="network" style="padding:3rem 1.5rem;max-width:960px;margin:0 auto">
+  <div class="section-tag">🔗 Full Network</div>
+  <h2>Also Check<br>These Out</h2>
+  <p class="section-intro">Three free sites. One mission. All linking together.</p>
+
+  <div class="network-cta">
+    <a href="https://smallville1979.github.io/ukscamwatch/" target="_blank" rel="noopener" class="network-card nc-scam">
+      <h3>⚠️ UK Scam Watch</h3>
+      <p>Know the scams before they get you. KYC fraud, romance scammers, fake loan groups, account buying — all exposed. Free.</p>
+    </a>
+    <a href="https://smallville1979.github.io/benefits-guide/" target="_blank" rel="noopener" class="network-card nc-benefits">
+      <h3>💛 Benefits Survival Guide</h3>
+      <p>£19 billion in benefits goes unclaimed every year. Food banks, energy help, free legal advice — all in one place. Free.</p>
+    </a>
+  </div>
+</section>
+
+<!-- SHARE -->
+<div class="share-bar">
+  <h2>💼 Share This — Someone Needs It</h2>
+  <p>Know a graduate stuck on Reddit? Someone who needs work? Share this. Free. Always will be.</p>
+  <div class="share-btns">
+    <a href="https://wa.me/?text=Free+UK+jobs+guide+%E2%80%94+graduate+schemes%2C+work+from+home%2C+free+courses%2C+CV+help%3A+https%3A%2F%2Fsmallville1979.github.io%2Fuk-jobs-guide%2F" target="_blank" rel="noopener" class="share-btn wa">💬 WhatsApp</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fsmallville1979.github.io%2Fuk-jobs-guide%2F" target="_blank" rel="noopener" class="share-btn fb">👍 Facebook</a>
+    <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fsmallville1979.github.io%2Fuk-jobs-guide%2F&text=Free+UK+Jobs+Survival+Guide+%F0%9F%92%BC+%E2%80%94+graduates%2C+WFH+jobs%2C+free+courses%2C+CV+help.+Share+with+someone+who+needs+it" target="_blank" rel="noopener" class="share-btn tw">🐦 Twitter</a>
+    <a href="https://www.reddit.com/submit?url=https%3A%2F%2Fsmallville1979.github.io%2Fuk-jobs-guide%2F&title=Free+UK+Jobs+Survival+Guide+%E2%80%94+graduates%2C+WFH%2C+free+courses%2C+CV+help+%5BNo+BS%5D" target="_blank" rel="noopener" class="share-btn rd">🔴 Reddit</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">UK Jobs Guide 💼</div>
+  <p>Free advice for everyone who needs it. No ads. No agenda. Just help.<br><br>
+  Also visit: <a href="https://smallville1979.github.io/benefits-guide/">💛 Benefits Survival Guide</a> · <a href="https://smallville1979.github.io/ukscamwatch/">⚠️ UK Scam Watch</a><br><br>
+  Built with ❤️ for everyone going through a hard time</p>
+</footer>
+
+</body>
+</html>
