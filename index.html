@@ -120,6 +120,7 @@
   .tag-green { background: var(--green); color: var(--black); }
   .tag-blue { background: var(--blue); color: var(--white); }
   .tag-red { background: var(--red); color: var(--white); }
+  .tag-orange { background: var(--orange); color: var(--white); }
 
   .step {
     display: flex;
@@ -150,6 +151,16 @@
   .warning h3 { color: var(--red); font-weight: 900; margin-bottom: 0.4rem; }
   .warning p { font-size: 0.92rem; margin: 0; }
 
+  .honest-box {
+    background: #0a1a0a;
+    border: 2px solid var(--green);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+  }
+  .honest-box h3 { color: var(--green); font-weight: 900; margin-bottom: 0.4rem; font-size: 1rem; }
+  .honest-box p { font-size: 0.92rem; margin: 0 0 0.4rem; }
+
   .btn {
     display: inline-block;
     padding: 0.65rem 1.3rem;
@@ -168,10 +179,18 @@
   .btn-blue { background: var(--blue); color: var(--white); }
   .btn-green { background: var(--green); color: var(--black); }
   .btn-grey { background: var(--mid); color: var(--white); border: 1px solid #444; }
+  .btn-orange { background: var(--orange); color: var(--white); }
 
   .divider {
     height: 4px;
     background: linear-gradient(90deg, var(--blue), var(--green));
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .divider-orange {
+    height: 4px;
+    background: linear-gradient(90deg, var(--orange), var(--yellow));
     max-width: 680px;
     margin: 0 auto;
   }
@@ -329,6 +348,70 @@
   </div>
 </section>
 
+<div class="divider-orange"></div>
+
+<!-- INTERNSHIPS — NEW SECTION -->
+<section id="graduates">
+  <div class="section-label">🔧 The option nobody wants to hear</div>
+  <h2>INTERNSHIPS. YES, IT'S FREE WORK. DO IT ANYWAY.</h2>
+
+  <div class="honest-box">
+    <h3>✅ The honest truth — no sugarcoating</h3>
+    <p>Yes. It's free labour. They know it. You know it. The whole thing is a bit of a con. <strong>But a reference from a real company plus 3 months of not having a gap on your CV is worth more right now than the wage you're not getting.</strong></p>
+    <p>If you can't get a warehouse job, can't get a grad scheme, and can't get through the door any other way — an internship is a door. It's not fair. It's still a door.</p>
+  </div>
+
+  <div class="card orange">
+    <div class="tag tag-orange">🎯 The one rule</div>
+    <h3>Only intern somewhere that could actually hire you</h3>
+    <p>Don't do unpaid work for a company that will never have a job for you. Pick somewhere with real staff, real turnover, and real reasons to bring on junior hires. <strong>40% of interns get offered a job by the same company.</strong> That's the whole point.</p>
+  </div>
+
+  <div class="card">
+    <div class="tag tag-yellow">📋 What you get from it</div>
+    <h3>It's not nothing. Here's what you actually walk away with.</h3>
+    <p>A named reference from a real employer. A line on the CV that stops the "no experience" rejection. An inside view of how a company actually works. And the contacts — because most jobs are never advertised and most people get hired by someone they've already met.</p>
+  </div>
+
+  <div class="card red">
+    <div class="tag tag-red">⚠️ What to avoid</div>
+    <h3>Unpaid internship red flags</h3>
+    <p><strong>More than 3 months unpaid</strong> — that's exploitation, not an internship. Walk away.<br>
+    <strong>No named supervisor</strong> — if nobody owns your development, you're just cheap labour.<br>
+    <strong>"Expenses only" with no expenses</strong> — they mean free. Know that going in.<br>
+    <strong>No chance of a job</strong> — ask in the interview: "have previous interns been hired here?" If they hesitate, it's a no.</p>
+  </div>
+
+  <div class="card green">
+    <div class="tag tag-green">🔍 Where to find them</div>
+    <h3>Internship sites that actually work</h3>
+    <p>Skip the big job boards. Go direct.</p>
+    <a href="https://www.ratemyplacement.co.uk" class="btn btn-grey">RATE MY PLACEMENT →</a>
+    <a href="https://www.prospects.ac.uk" class="btn btn-grey">PROSPECTS →</a>
+    <a href="https://www.milkround.com" class="btn btn-grey">MILKROUND →</a>
+    <a href="https://www.targetjobs.co.uk" class="btn btn-grey">TARGET JOBS →</a>
+    <p style="margin-top:0.75rem;">Or email 10 SMEs in your sector directly. Most big companies post internships; most small ones don't — but they'll take a good one if you ask properly.</p>
+  </div>
+
+  <div class="card blue">
+    <div class="tag tag-blue">✉️ The email that works</div>
+    <h3>Word for word. Send this.</h3>
+    <p style="font-style:italic; color:#ccc; font-size:0.9rem; line-height:1.7; background:#0d0d1a; padding:1rem; border-radius:6px; margin-top:0.5rem;">
+      Subject: Internship enquiry — [Your degree] graduate, available immediately<br><br>
+      Hi [name],<br><br>
+      I'm a [subject] graduate from [uni], available immediately and looking for 2-3 months of hands-on experience in [their sector]. I'm not expecting a salary — I want the experience and the reference.<br><br>
+      I've looked at what you do and I think I could genuinely contribute to [specific thing they do]. Happy to come in for a chat with no obligation.<br><br>
+      [Your name]
+    </p>
+    <p style="margin-top:0.75rem;">That's it. Short. Specific. Costs them nothing. Most will reply.</p>
+  </div>
+
+  <div class="warning" style="margin-top:0.5rem;">
+    <h3>🚨 Graphic designers, creatives, arts grads — read this</h3>
+    <p>AI has eaten most of the entry-level creative work that used to exist. Junior design briefs, stock illustration, basic copywriting — gone. <strong>The graduates surviving right now are the ones who can do TWO things.</strong> Design + basic web. Design + social video. Writing + SEO. Pick a second skill and spend 6 weeks learning it. It changes everything.</p>
+  </div>
+</section>
+
 <div class="divider"></div>
 
 <!-- MONEY WHILE HUNTING -->
@@ -357,7 +440,7 @@
   <div class="card">
     <h3>Check what else you're owed 💸</h3>
     <p>Council tax discount, housing benefit, free prescriptions. Graduates on low income are often entitled to more than they think.</p>
-    <a href="https://smallville1979.github.io/skintbutsorted/" class="btn btn-yellow">CHECK WHAT YOU'RE OWED →</a>
+    <a href="https://smallville1979.github.io/skint/" class="btn btn-yellow">CHECK WHAT YOU'RE OWED →</a>
   </div>
 </section>
 
@@ -367,7 +450,7 @@
 <div class="footer-links">
   <h2>👀 More free help</h2>
   <div class="link-grid">
-    <a href="https://smallville1979.github.io/skintbutsorted/" class="link-card">
+    <a href="https://smallville1979.github.io/skint/" class="link-card">
       <span class="emoji">💸</span>
       <strong>SKINT BUT SORTED</strong>
       <span>Gov owes ya £1,400. Claim it.</span>
@@ -392,10 +475,20 @@
       <strong>BREAK THE CYCLE</strong>
       <span>How the debt trap works.</span>
     </a>
-    <a href="https://smallville1979.github.io/scams-guide/" class="link-card">
+    <a href="https://smallville1979.github.io/loan-scam-graphic/" class="link-card">
       <span class="emoji">🚨</span>
       <strong>SCAMS GUIDE</strong>
       <span>Don't get robbed job hunting.</span>
+    </a>
+    <a href="https://smallville1979.github.io/bank-of-dad/" class="link-card">
+      <span class="emoji">🏦</span>
+      <strong>BANK OF MUM AND DAD</strong>
+      <span>Ask ya mates. Ask ya family.</span>
+    </a>
+    <a href="https://smallville1979.github.io/benefits-guide/" class="link-card">
+      <span class="emoji">💷</span>
+      <strong>BENEFITS GUIDE</strong>
+      <span>£19bn unclaimed. Is some yours?</span>
     </a>
   </div>
   <p style="margin-top:1.5rem; font-size:0.85rem; color:#555; text-align:center;">
@@ -403,6 +496,6 @@
   </p>
 </div>
 
-<script src="https://smallville1979.github.io/kit/kit.js"></script>
+<script src="https://smallville1979.github.io/kit.js"></script>
 </body>
 </html>
